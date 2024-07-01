@@ -5,103 +5,80 @@ import { PHONE_NUMBER } from "../constants";
 import develoartLogo from "../images/develoartLogo.png";
 ---
 
-<footer
-  class="flex bg-mainBackgroud desktop:p-16 desktop:pt-2 justify-between items-center mobile:p-3 desktop:text-[16px] mobile:text-[10px] max-mobile:text-[10px] tablet:text-[12px]"
->
-  <div
-    class="text-darkGray flex flex-col items-center desktop:mr-20 mobile:mr-12 max-mobile:mr-12"
-  >
-    <a href="#">
-      <Image
-        src={logo}
-        alt="logo"
-        loading="lazy"
-        width="200"
-        class="desktop:size-40 mobile:size-20 max-mobile:size-20"
-      /></a
-    >
-    <p
-      class="mt-[10px] desktop:leading-loose mobile:leading-normal max-mobile:leading-normal mobile:text-nowrap max-mobile:text-balance desktop:text-[16px] mobile:text-[10px] tablet:text-[12px]"
-    >
-      Salon piękności w twojej okolicy,<br />który podkreśli Twoje piękno
+<footer class="flex flex-col gap-12 bg-mainBackgroud p-6 pt-2 tablet:p-12 tablet:pt-4">
+  <div class="flex items-center justify-center gap-0 tablet:gap-4 tablet:flex-row flex-col">
+    <div>
+      <a href="#">
+        <Image
+          src={logo}
+          alt="logo"
+          loading="lazy"
+          width="200"
+          class="max-w-[120px] tablet:max-w-[160px]"
+        />
+      </a>
+    </div>
+    <p class="text-xl italic font-[Lora] text-center px-8 tablet:px-0">
+      Salon piękności w twojej okolicy, który podkreśli Twoje piękno
     </p>
-    <address class="flex flex-col mt-1 self-start">
-      <a
-        class="hover:text-accent not-italic block mobile:text-[10px] desktop:text-[16px]"
-        href=`tel:${PHONE_NUMBER}`
-        aria-label="phone number">tel. + <b>48 {PHONE_NUMBER}</b></a
-      >
-    </address>
   </div>
-
-  <div
-    class="flex flex-start desktop:mt-auto desktop:space-x-20 mobile:space-x-0 tablet:space-x-20 max-mobile:space-x-10 mobile:mt-0 tablet:mt-0 mobile:self-auto tablet:self-auto"
-  >
-    <div
-      class="desktop:mr-20 desktop:ml-50 mobile:mr-10 mobile:ml-0 max-mobile:mr-2 tablet:mr-20 tablet:ml-0"
-    >
-      <h2
-        class="text-darkGray font-normal desktop:text-[25px] mobile:text-[14px] max-mobile:text-[14px]"
-      >
-        Nawigacja
-      </h2>
-      <ul class="mt-[15px] gap-1 flex flex-col text-darkGray">
-        <li class="hover:text-accent">
-          <a class="block" href="#">Strona Główna</a>
-        </li>
-        <li class="hover:text-accent">
-          <a class="block" href="#aboutUs">O nas</a>
-        </li>
-        <li class="hover:text-accent">
-          <a class="block" href="#services">Usługi</a>
-        </li>
-        <li class="hover:text-accent">
-          <a class="block" href="#prices">Cennik</a>
-        </li>
-      </ul>
+  <div class="flex justify-between flex-col tablet:flex-row tablet:gap-0 gap-4">
+    <div class="flex flex-[3] justify-between desktop:justify-around flex-wrap gap-8">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-2xl">Nawigacja</h2>
+        <ul class="gap-2 flex flex-col text-darkGray">
+          <li class="hover:text-accent">
+            <a class="block" href="#">Strona Główna</a>
+          </li>
+          <li class="hover:text-accent">
+            <a class="block" href="#aboutUs">O nas</a>
+          </li>
+          <li class="hover:text-accent">
+            <a class="block" href="#services">Usługi</a>
+          </li>
+          <li class="hover:text-accent">
+            <a class="block" href="#prices">Cennik</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h2 class="text-2xl">Linki</h2>
+        <ul class="gap-2 flex flex-col text-darkGray">
+          <li class="hover:text-accent">
+            <a
+              class="block"
+              href="https://www.facebook.com/profile.php?id=61557345552094&locale=pl_PL"
+              target="_blank"
+            >Facebook</a>
+          </li>
+          <li class="hover:text-accent">
+            <a class="block" href="">Opinie</a>
+          </li>
+          <li class="hover:text-accent">
+            <a class="block" href="">Gdzie nas znaleźć</a>
+          </li>
+        </ul>
+      </div>
+      <address>
+        <a
+          class="hover:text-accent block"
+          href=`tel:${PHONE_NUMBER}`
+          aria-label="phone number"
+        >Tel. + <b>48 {PHONE_NUMBER}</b></a>
+      </address>
     </div>
-    <div class="ml-10 mr-0">
-      <h2
-        class="text-darkGray font-normal desktop:text-[25px] mobile:text-[14px] mobile:ml-2 max-mobile:text-[14px]"
-      >
-        Linki
-      </h2>
-      <ul
-        class="mt-[15px] gap-1 flex flex-col text-darkGray mobile:ml-2 max-mobile:mr-5"
-      >
-        <li class="hover:text-accent">
-          <a
-            class="block"
-            href="https://www.facebook.com/profile.php?id=61557345552094&locale=pl_PL"
-            target="_blank">Facebook</a
-          >
-        </li>
-        <li class="hover:text-accent"><a class="block" href="">Opinie</a></li>
-        <li class="hover:text-accent">
-          <a class="block" href="">Gdzie nas znaleźć</a>
-        </li>
-      </ul>
-    </div>
+    <a href="https://develoart.com/" target="_blank" class="block  flex-1">
+      <div class="text-gray flex flex-col items-center">
+        <Image
+          src={develoartLogo}
+          alt="develoart"
+          loading="lazy"
+          width="50"
+        />
+        <p class="text-center text-xs desktop:text-sm">
+          Strona stworzona przez<br />zespół DeveloArt
+        </p>
+      </div>
+    </a>
   </div>
-
-  <a
-    href="https://develoart.com/"
-    target="_blank"
-    class="block desktop:self-end mobile:self-auto"
-  >
-    <div class="text-gray flex flex-col items-center">
-      <Image
-        src={develoartLogo}
-        alt="develoart"
-        loading="lazy"
-        width="50"
-        class="desktop:w-20 mobile:w-10 max-mobile:w-8"
-      />
-      <p
-        class="mt-[10px] text-center desktop:text-[12px] mobile:text-[8px] max-mobile:text-[8px]"
-      >
-        Strona stworzona przez<br />zespół DeveloArt
-      </p>
-    </div>
-  </a>
 </footer>
