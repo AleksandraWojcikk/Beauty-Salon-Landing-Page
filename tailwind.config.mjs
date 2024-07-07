@@ -19,6 +19,7 @@ export default {
       },
     },
     screens: {
+      large: '1440px',
       desktop: '1024px',
       tablet: '768px',
       mobile: '480px',
@@ -26,9 +27,7 @@ export default {
     backgroundImage: {
       'hero-wave':
         'url(\'data:image/svg+xml,%3Csvg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"%3E%3Crect x="0" y="0" width="900" height="600" fill="%23ffffff"%3E%3C/rect%3E%3Cpath d="M710 600L657 550C604 500 498 400 460.5 300C423 200 454 100 469.5 50L485 0L900 0L900 50C900 100 900 200 900 300C900 400 900 500 900 550L900 600Z" fill="%23fbf3f7" stroke-linecap="round" stroke-linejoin="miter"%3E%3C/path%3E%3C/svg%3E\')',
-       
     },
-   
   },
   plugins: [
     plugin(function ({ addComponents, theme, addBase }) {
