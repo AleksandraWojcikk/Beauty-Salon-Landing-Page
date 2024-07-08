@@ -1,7 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Base from '../layouts/Base.astro';
+import Hero from "../components/Hero.astro";
+import AboutUs from "../components/AboutUs.astro";
+import Services from "../components/Services.astro";
+import BestSellers from "../components/BestSellers.astro";
 ---
 
-<Layout title="Spa & Beauty Salon Landing Page">
-  <main></main>
-</Layout>
+<Base title="Spa & Beauty Salon Landing Page">
+  <Hero />
+  <AboutUs />
+  <Services />
+  <BestSellers />
+</Base>
