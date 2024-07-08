@@ -105,7 +105,7 @@ const pinkText =
 <ul class="flex mt-[40px] flex-wrap justify-between">
   {
     bestSellers.map(({ items }) => (
-      <li class="rounded-lg shadow-lg bg-white w-full mobile:w-full tablet:w-[48%] desktop:w-[32%]">
+      <li class="rounded-lg shadow-lg bg-white w-full text-stone-600 mobile:w-full tablet:w-[48%] desktop:w-[32%]">
         <ul>
           {items.map(({ title, price }) => (
             <div class="flex justify-between px-[20px] pt-[10px] pb-[10px]">
@@ -114,7 +114,7 @@ const pinkText =
               >
                 {title}
               </h3>
-              <p class="font-bold  text-right">{price}</p>
+              <p class="font-bold text-right text-stone-600">{price}</p>
             </div>
           ))}{" "}
         </ul>
