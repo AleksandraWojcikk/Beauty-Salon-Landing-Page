@@ -21,7 +21,7 @@ import { PHONE_NUMBER, ADRESS } from '../constants';
     <div class="self-end max-tablet:hidden">
       <Image class="large:block hidden" src={heroWoman} alt="Background woman" />
     </div>
-    <div class="relative text-center border-4 rounded-xl border-accent bg-pinkLight self-center p-6 min-w-fit max-desktop:h-26 max-tablet:h-fit">
+    <div class="relative text-center border-4 rounded-xl border-accent bg-pinkLight self-center p-6 min-w-fit max-desktop:h-26 max-tablet:h-fit max-tablet:w-full">
       <div class="max-tablet:hidden absolute bottom-6 left-6 w-full h-full border-4 rounded-xl border-accent opacity-50 -z-10">
       </div>
       <h2 class="text-lg">Jesteśmy otwarci:</h2>
@@ -33,8 +33,8 @@ import { PHONE_NUMBER, ADRESS } from '../constants';
         <li class="font-bold">{ADRESS}</li>
       </ul>
   </div>
-  <div class="tablet:hidden">
-    <button id="reserveButton" class="accentButton self-start my-4 py-3 text-xl" aria-label="Zarezerwuj wizytę">
+  <div class="tablet:hidden max-tablet:w-full">
+    <button id="reserveButton" class="accentButton self-start my-4 py-3 text-xl w-full" aria-label="Zarezerwuj wizytę">
       Zarezerwuj wizytę
     </button>
   </div>
