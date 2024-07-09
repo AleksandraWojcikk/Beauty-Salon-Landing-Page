@@ -8,7 +8,7 @@ const { icon, description } = Astro.props;
 ---
 
 <li
-  class="w-[20%] flex flex-col items-center bg-white shadow-xl px-[20px] py-[40px] mx-10 my-4 rounded-[22px] max-[1280px]:w-[80%]"
+  class="flex flex-col items-center bg-white shadow-xl px-[20px] py-[40px] my-4 rounded-[22px] max-desktop:w-[80%] max-mobile:w-full desktop:w-full"
 >
   <div class="w-[45px] h-[45px] "> <Image loading="eager" src={icon} alt="ikona"/> </div>
   <p class="font-light mt-[15px]">
