@@ -8,7 +8,7 @@ import develoartLogo from "../images/develoartLogo.png";
 <footer class="flex flex-col gap-12 bg-mainBackgroud p-6 pt-2 tablet:p-12 tablet:pt-4">
   <div class="flex items-center justify-center gap-0 tablet:gap-4 tablet:flex-row flex-col">
     <div>
-      <a href="#">
+      <a href="#" aria-label="Go to the top of the page">
         <Image
           src={logo}
           alt="logo"
@@ -28,16 +28,16 @@ import develoartLogo from "../images/develoartLogo.png";
         <h2 class="text-2xl">Nawigacja</h2>
         <ul class="gap-2 flex flex-col text-darkGray">
           <li class="hover:text-accent">
-            <a class="block" href="#">Strona Główna</a>
+            <a class="block" href="#" aria-label="Go to the top of the page">Strona Główna</a>
           </li>
           <li class="hover:text-accent">
-            <a class="block" href="#aboutUs">O nas</a>
+            <a class="block" href="#aboutUs" aria-label="Go to About us section">O nas</a>
           </li>
           <li class="hover:text-accent">
-            <a class="block" href="#services">Usługi</a>
+            <a class="block" href="#services" aria-label="Go to Services section">Usługi</a>
           </li>
           <li class="hover:text-accent">
-            <a class="block" href="#prices">Cennik</a>
+            <a class="block" href="#prices" aria-label="Go to Prices section">Cennik</a>
           </li>
         </ul>
       </div>
@@ -49,13 +49,14 @@ import develoartLogo from "../images/develoartLogo.png";
               class="block"
               href="https://www.facebook.com/profile.php?id=61557345552094&locale=pl_PL"
               target="_blank"
+               aria-label="Go to our Facebook page"
             >Facebook</a>
           </li>
           <li class="hover:text-accent">
-            <a class="block" href="">Opinie</a>
+            <a class="block" href="" aria-label="Read our reviews">Opinie</a>
           </li>
           <li class="hover:text-accent">
-            <a class="block" href="">Gdzie nas znaleźć</a>
+            <a class="block" href="" aria-label="Find our location">Gdzie nas znaleźć</a>
           </li>
         </ul>
       </div>
@@ -63,11 +64,12 @@ import develoartLogo from "../images/develoartLogo.png";
         <a
           class="hover:text-accent block"
           href=`tel:${PHONE_NUMBER}`
-          aria-label="phone number"
+          aria-label={`Call us at +48 ${PHONE_NUMBER}`}
         >Tel. + <b>48 {PHONE_NUMBER}</b></a>
       </address>
     </div>
-    <a href="https://develoart.com/" target="_blank" class="block  flex-1">
+    <a href="https://develoart.com/" target="_blank" class="block flex-1" aria-label="Go to the page of the company that created this website"
+    >
       <div class="text-gray flex flex-col items-center">
         <Image
           src={develoartLogo}
