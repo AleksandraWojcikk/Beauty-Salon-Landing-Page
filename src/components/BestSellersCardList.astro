@@ -109,14 +109,14 @@ const pinkText =
         <ul>
           {items.map(({ title, price }) => (
             title && (
-              <div class="flex justify-between px-[20px] pt-[10px] pb-[10px]">
+              <li class="flex justify-between px-[20px] py-[20px]">
                 <h3
                   class={`text-base mb-[1px] text-left ${boldTitles.includes(title) && "font-bold"} ${title === pinkText && "text-accent"}`}
                 >
                   {title}
                 </h3>
                 <p class="font-bold text-right text-stone-600">{price}</p>
-              </div>
+              </li>
             )
           ))}
         </ul>
