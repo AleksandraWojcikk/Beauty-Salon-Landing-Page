@@ -1,4 +1,6 @@
 ---
+import { isRenderTemplateResult } from "astro/runtime/server/render/astro/render-template.js";
+import { Image } from "astro:assets";
 
 const bestSellers = [
   {
@@ -106,17 +108,15 @@ const pinkText =
       <li class="rounded-lg shadow-lg bg-white w-full text-stone-600 mobile:w-full tablet:w-[48%] desktop:w-[32%]">
         <ul>
           {items.map(({ title, price }) => (
-            title && (
-              <li class="flex justify-between px-[20px] py-[20px]">
-                <h3
-                  class={`text-base mb-[1px] text-left ${boldTitles.includes(title) && "font-bold"} ${title === pinkText && "text-accent"}`}
-                >
-                  {title}
-                </h3>
-                <p class="font-bold text-right text-stone-600">{price}</p>
-              </li>
-            )
-          ))}
+            <div class="flex justify-between px-[20px] pt-[10px] pb-[10px]">
+              <h3
+                class={`text-base mb-[1px] text-left ${boldTitles.includes(title) && "font-bold"} ${title === pinkText && "text-accent"}`}
+              >
+                {title}
+              </h3>
+              <p class="font-bold text-right text-stone-600">{price}</p>
+            </div>
+          ))}{" "}
         </ul>
       </li>
     ))

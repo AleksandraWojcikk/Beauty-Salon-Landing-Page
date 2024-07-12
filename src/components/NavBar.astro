@@ -9,31 +9,30 @@ import logo from '../images/logo.png';
 	>
 		<ul class='p-0 flex text-[#3e2c26]'>
 			<li class='hover:text-pink transition-colors duration-200 p-2'>
-				<a href='#' aria-label="Go to the top of the page">Strona główna</a>
+				<a href='#'>Strona główna</a>
 			</li>
 			<li
 				class='ml-[25px] p-2 hover:text-pink transition-colors duration-200 aboutUs'
 			>
-				<a href='#aboutUs' aria-label="Go to About us section">O nas</a>
+				<a href='#aboutUs'>O nas</a>
 			</li>
 			<li
 				class='ml-[25px] p-2 hover:text-pink transition-colors duration-200 services'
 			>
-				<a href='#services' aria-label="Go to Services section">Usługi</a>
+				<a href='#services'>Usługi</a>
 			</li>
 			<li
 				class='ml-[25px] p-2 hover:text-pink transition-colors duration-200 prices'
 			>
-				<a href='#prices' aria-label="Go to Prices section">Cennik</a>
+				<a href='#prices'>Cennik</a>
 			</li>
 		</ul>
 		<a
-			href='#'
+			href='/'
 			class='absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-[200px] max-desktop:hidden transition-transform ease-in-out'
 			id='logo'
-			 aria-label="Go to the top of the page"
 		>
-			<Image loading='eager' src={logo} alt='logo' />
+			<Image src={logo} alt='logo' />
 		</a>
 		<ul class='p-0 flex'>
 			<li class='ml-[25px] hover:text-pink transition-colors duration-200 p-2'>
@@ -54,21 +53,21 @@ import logo from '../images/logo.png';
 	id='mobile-menu'
 	class='tablet:hidden fixed w-full h-full top-0 left-0 flex flex-col justify-center items-center bg-white z-10 transition-transform -translate-y-full duration-300'
 >
-	<a href='#' aria-label="Go to the top of the page">
+	<a href='/'>
 		<Image id='mobile-logo' class='w-[200px]' src={logo} alt='logo' />
 	</a>
 	<ul class='w-screen h-screen flex flex-col items-center text-dark text-lg'>
 		<li class='hover:text-accent transition-colors duration-200 mobile-link'>
-			<a class='p-4 block' href='#' aria-label="Go to the top of the page">Strona główna</a>
+			<a class='p-4 block' href='#'>Strona główna</a>
 		</li>
 		<li class='hover:text-accent transition-colors duration-200 mobile-link'>
-			<a class='p-4 block' href='#aboutUs' aria-label="Go to About us section">O nas</a>
+			<a class='p-4 block' href='#aboutUs'>O nas</a>
 		</li>
 		<li class='hover:text-accent transition-colors duration-200 mobile-link'>
-			<a class='p-4 block' href='#services' aria-label="Go to Services section">Usługi</a>
+			<a class='p-4 block' href='#services'>Usługi</a>
 		</li>
 		<li class='hover:text-accent transition-colors duration-200 mobile-link'>
-			<a class='p-4 block' href='#prices' aria-label="Go to Prices section">Cennik</a>
+			<a class='p-4 block' href='#prices'>Cennik</a>
 		</li>
 	</ul>
 </nav>
