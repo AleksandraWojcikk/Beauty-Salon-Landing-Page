@@ -5,26 +5,26 @@ import logo from '../images/logo.png';
 
 <div class='max-tablet:hidden sticky top-0 z-10'>
 	<nav
-		class='flex justify-between relative items-center border-pink border-t-0 bg-mainBackgroud rounded-b-2xl p-5'
+		class='flex justify-between relative items-center border-transparent border-2 border-t-0 bg-mainBackgroud rounded-b-2xl px-6 py-5 transition-colors duration-200'
 	>
-		<ul class='p-0 flex text-[#3e2c26]'>
-			<li class='hover:text-pink transition-colors duration-200 p-2'>
-				<a href='#' aria-label="Go to the top of the page">Strona główna</a>
+		<ul class='flex large:gap-8 desktop:gap-4 tablet:gap-8 text-[#3e2c26]'>
+			<li class='hover:text-pink transition-colors duration-200'>
+				<a href='#' aria-label="Go to the top of the page" class="py-2">Strona główna</a>
 			</li>
 			<li
-				class='ml-[25px] p-2 hover:text-pink transition-colors duration-200 aboutUs'
+				class='hover:text-pink transition-colors duration-200 aboutUs'
 			>
-				<a href='#aboutUs' aria-label="Go to About us section">O nas</a>
+				<a href='#aboutUs' aria-label="Go to About us section" class="py-2">O nas</a>
 			</li>
 			<li
-				class='ml-[25px] p-2 hover:text-pink transition-colors duration-200 services'
+				class='hover:text-pink transition-colors duration-200 services'
 			>
-				<a href='#services' aria-label="Go to Services section">Usługi</a>
+				<a href='#services' aria-label="Go to Services section" class="py-2">Usługi</a>
 			</li>
 			<li
-				class='ml-[25px] p-2 hover:text-pink transition-colors duration-200 prices'
+				class='hover:text-pink transition-colors duration-200 prices'
 			>
-				<a href='#prices' aria-label="Go to Prices section">Cennik</a>
+				<a href='#prices' aria-label="Go to Prices section" class="py-2">Cennik</a>
 			</li>
 		</ul>
 		<a
@@ -33,11 +33,11 @@ import logo from '../images/logo.png';
 			id='logo'
 			 aria-label="Go to the top of the page"
 		>
-			<Image loading='eager' src={logo} alt='logo' />
+			<Image loading='eager' src={logo} alt='logo'/>
 		</a>
-		<ul class='p-0 flex'>
-			<li class='ml-[25px] hover:text-pink transition-colors duration-200 p-2'>
-				<a href='/'>Kontakt</a>
+		<ul class='py-2 flex'>
+			<li class='hover:text-pink transition-colors duration-200'>
+				<a href='/' class="py-2">Kontakt</a>
 			</li>
 		</ul>
 	</nav>
@@ -55,7 +55,7 @@ import logo from '../images/logo.png';
 	class='tablet:hidden fixed w-full h-full top-0 left-0 flex flex-col justify-center items-center bg-white z-10 transition-transform -translate-y-full duration-300'
 >
 	<a href='#' aria-label="Go to the top of the page">
-		<Image id='mobile-logo' class='w-[200px]' src={logo} alt='logo' />
+		<Image loading='eager' id='mobile-logo' class='w-[200px]' src={logo} alt='logo' />
 	</a>
 	<ul class='w-screen h-screen flex flex-col items-center text-dark text-lg'>
 		<li class='hover:text-accent transition-colors duration-200 mobile-link'>
@@ -96,14 +96,16 @@ import logo from '../images/logo.png';
 			}
 		});
 
-		if (scrollY > scrollThreshold && !nav.classList.contains('border-2')) {
-			nav.classList.add('border-2');
+		if (scrollY > scrollThreshold && !nav.classList.contains('border-pink')) {
+			nav.classList.remove('border-transparent');
+			nav.classList.add('border-pink');
 			logo.classList.add('scale-75');
 		} else if (
 			scrollY <= scrollThreshold &&
-			nav.classList.contains('border-2')
+			nav.classList.contains('border-pink')
 		) {
-			nav.classList.remove('border-2');
+			nav.classList.remove('border-pink');
+			nav.classList.add('border-transparent');
 			logo.classList.remove('scale-75');
 		}
 	};
